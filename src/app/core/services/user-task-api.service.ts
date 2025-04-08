@@ -2,12 +2,14 @@ import { HttpClient } from "@angular/common/http"
 import { Injectable } from "@angular/core"
 import { Observable, map } from "rxjs"
 import { ApiModel, TaskModel, UserTaskModel, UserTaskRegisterModel, UserTaskRemoveModel, UserTaskToggleModel, UserTaskUpdateModel } from "../../shared/models/api.model"
+import { environment } from '../../../environments/environment'
 
 
 @Injectable({ providedIn: 'root' })
 export class UserTaskApiService {
 
-    private apiUrl: string = `/api/atom/v1/users/`
+    private baseUrl = environment.apiUrl
+    private apiUrl: string = `${this.baseUrl}/atom/v1/users/`
 
     constructor(
         private http: HttpClient

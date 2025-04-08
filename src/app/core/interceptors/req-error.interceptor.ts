@@ -6,6 +6,8 @@ import { NotificationService } from "../services/notification.service";
 import { AuthService } from "../services/auth.service";
 import { ApiModel } from "../../shared/models/api.model";
 import { UserModel } from "../../shared/models/auth.model";
+import { environment } from '../../../environments/environment'
+
 
 export const requestErrorInterceptor: HttpInterceptorFn = (req, next) => {
     // Inyectar Modulos y Servicios Requeridos por el Interceptor
@@ -13,6 +15,7 @@ export const requestErrorInterceptor: HttpInterceptorFn = (req, next) => {
     const http = inject(HttpClient)
     const notification = inject(NotificationService)
     const authService = inject(AuthService)
+    const baseUrl = environment.apiUrl
 
     // Procesar la solicitud de origen 
     return next(req).pipe(
@@ -25,7 +28,7 @@ export const requestErrorInterceptor: HttpInterceptorFn = (req, next) => {
                 const loginPayload = req.body
 
                 // realizar la solicitud para el registro de usuario con el mismo payload del inicio de sesion
-                return http.post<ApiModel<UserModel>>('/api/atom/v1/auth/register', loginPayload)
+                return http.post<ApiModel<UserModel>>(`${baseUrl}/atom/v1/auth/register`, loginPayload)
                     .pipe(
                         switchMap((res) => {
 
