@@ -1,0 +1,53 @@
+.auth-form {
+    width: 500px;
+    height: 200px;
+    background-color: #eee;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    
+    border-radius: 4px;
+    gap: 10px;
+    
+
+    form {
+        position: relative;
+        margin-top: 10px;
+        width: 90%;
+
+    }
+}
+
+.login-btn {
+    position: absolute;
+    top: 70px;
+    right: 0px;
+    background-color: #2a4d69 ;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    height: 40px;
+    width: 100px;
+    color: white;
+    transition: .3s ease all;
+    gap: 5px;
+    border: none;
+    text-transform: uppercase;
+
+    &:hover{
+        transition: .3s ease all;
+        background-color: #486a86;
+        cursor: pointer;
+    }
+}
+
+
+.form-label{
+    margin-top: 30px;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    color: #555;
+}

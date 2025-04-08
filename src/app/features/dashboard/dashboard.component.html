@@ -1,0 +1,24 @@
+<div class="dashboard-page">
+
+    <nav class="navbar">
+        <div class="navbar-brand">
+            ATOM
+        </div>
+
+        <span class="user-info">{{userEmail}}</span>
+
+        <ul class="nav-items">
+            <li class="nav-item">
+                <button class="nav-link" (click)="onLogout()">
+                    <mat-icon class="mat-18">logout</mat-icon>
+                </button>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <list-user-task-cmp [userId]="userId" />
+    </div>
+
+
+</div>

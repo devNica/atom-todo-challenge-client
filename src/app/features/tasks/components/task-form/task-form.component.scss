@@ -1,0 +1,38 @@
+.task-form-container {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 250px;
+
+    position: relative;
+
+
+    h1 {
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: .2rem;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .group-btn {
+        position: absolute;
+        right: 0px;
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+
+
+    }
+
+    .btn-disabled {
+        background-color: #979899 !important;
+        color: #000;
+    }
+
+    .btn-active {
+        background-color: #3f51b5;
+        color: #fff;
+    }
+}

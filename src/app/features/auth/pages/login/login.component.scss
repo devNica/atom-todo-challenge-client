@@ -1,0 +1,16 @@
+.login-page{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background-color: #323949;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1{
+        color: #FF7400;
+        text-transform: uppercase;
+        letter-spacing: 0.3rem;
+        font-size: 2rem;
+    }
+}

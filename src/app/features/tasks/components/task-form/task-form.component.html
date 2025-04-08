@@ -1,0 +1,39 @@
+<div class="task-form-container">
+    <h1>Formulario de Tareas</h1>
+    <form [formGroup]="form">
+
+        <mat-form-field class="full-width">
+            <mat-label>
+                Nombre:
+            </mat-label>
+            <input matInput formControlName="taskName">
+        </mat-form-field>
+
+        <mat-form-field class="full-width">
+            <mat-label>
+                Descripcion:
+            </mat-label>
+            <input matInput formControlName="taskDescription">
+        </mat-form-field>
+
+        <div *ngIf="!isEditing" class="group-btn">
+            <button mat-flat-button color="primary" [disabled]="!form.valid"  [ngClass]="form.valid ? 'btn-active' : 'btn-disabled'"
+            (click)="handleSubmit($event)">
+            <mat-icon class="mat-18">task</mat-icon>
+            Guardar
+        </button>
+        </div>
+
+        <div *ngIf="isEditing" class="group-btn">
+            <button mat-flat-button color="primary" [disabled]="!form.valid" (click)="handleSubmit($event)">
+                <mat-icon class="mat-18">task</mat-icon>
+                Actualizar
+            </button>
+
+            <button mat-flat-button color="primary" [disabled]="!form.valid" (click)="onEditCancel($event)">
+                <mat-icon class="mat-18">reply</mat-icon>
+                Cancelar
+            </button>
+        </div>
+    </form>
+</div>

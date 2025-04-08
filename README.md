@@ -1,27 +1,123 @@
-# Client
+# atom-todo-challenge-client
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.15.
+# 📚 Características
 
-## Development server
+    🧲 Interceptors: Global de Peticiones | Errores de Autenticacion
+    🔐 Proteccion de Rutas Privadas: Funcion CanActiveFn para Rutas Privadas
+    🔑 Almacenamiento de Token de Sesion 
+    🔥 API Service (Auth & UserTask)
+    🏗️ Estructurado por Arq Basada en Componentes
+    💎 StandAlone Components
+    🔔 Componente de Notificaciones Globales
+    🦸 Componente de Autenticacion de Usuarios
+    🔠 Componente Formulario Reactivo de Regsitro de Tareas
+    📑 Componente DataTable Para Listado de Tareas Registradas
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+# 🚀 Instalacion y Uso
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## 1. Descargar el Repositorio
 
-## Build
+## `github.com/devnica/atom-todo-challenge-client`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## 2. Instalar Depedencias
 
-## Running unit tests
+## `npm run install -E`
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## 3. Ejecutar en Modo Desarrollo
 
-## Running end-to-end tests
+## `npm run dev`
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## 4. Compilar Aplicacion
 
-## Further help
+## `npm run build:develop`
+## `npm run build:prod`
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## 5. Ejecutar en Modo Producion
+
+## `npm start`
+
+# 📂 Estructura del Proyecto
+
+        ├── .editorconfig
+        ├── .gitignore
+        ├── angular.json
+        ├── LICENSE
+        ├── package-lock.json
+        ├── package.json
+        ├── proxy.config.json
+        ├── README.md
+        ├── src/
+        |   ├── app/
+        |   |   ├── app.component.scss
+        |   |   ├── app.component.ts
+        |   |   ├── app.config.ts
+        |   |   ├── app.routes.ts
+        |   |   ├── core/
+        |   |   |   ├── guards/
+        |   |   |   |   ├── auth.guard.ts
+        |   |   |   ├── interceptors/
+        |   |   |   |   ├── auth-error.interceptor.ts
+        |   |   |   |   ├── auth.interceptor.ts
+        |   |   |   ├── services/
+        |   |   |   |   ├── auth-api.service.ts
+        |   |   |   |   ├── auth.service.ts
+        |   |   |   |   ├── notification.service.ts
+        |   |   |   |   ├── user-task-api.service.ts
+        |   |   |   |   ├── user-task.service.ts
+        |   |   ├── features/
+        |   |   |   ├── auth/
+        |   |   |   |   ├── auth.routes.ts
+        |   |   |   |   ├── components/
+        |   |   |   |   |   ├── login-form/
+        |   |   |   |   |   |   ├── auth-form.component.html
+        |   |   |   |   |   |   ├── auth-form.component.scss
+        |   |   |   |   |   |   ├── auth-form.component.ts
+        |   |   |   |   ├── forms/
+        |   |   |   |   |   ├── auth.form.ts
+        |   |   |   |   ├── material-modules-auth.ts
+        |   |   |   |   ├── pages/
+        |   |   |   |   |   ├── login/
+        |   |   |   |   |   |   ├── login.component.html
+        |   |   |   |   |   |   ├── login.component.scss
+        |   |   |   |   |   |   ├── login.component.ts
+        |   |   |   ├── dashboard/
+        |   |   |   |   ├── dashboard.component.html
+        |   |   |   |   ├── dashboard.component.scss
+        |   |   |   |   ├── dashboard.component.ts
+        |   |   |   ├── notifications/
+        |   |   |   |   ├── notification.component.html
+        |   |   |   |   ├── notification.component.scss
+        |   |   |   |   ├── notification.component.ts
+        |   |   |   ├── tasks/
+        |   |   |   |   ├── components/
+        |   |   |   |   |   ├── list/
+        |   |   |   |   |   |   ├── list-user-task.component.html
+        |   |   |   |   |   |   ├── list-user-task.component.scss
+        |   |   |   |   |   |   ├── list-user-task.component.ts
+        |   |   |   |   |   ├── task-form/
+        |   |   |   |   |   |   ├── task-form.component.html
+        |   |   |   |   |   |   ├── task-form.component.scss
+        |   |   |   |   |   |   ├── task-form.component.ts
+        |   |   |   |   ├── forms/
+        |   |   |   |   |   ├── task.form.ts
+        |   |   |   |   ├── material.modules.ts
+        |   |   ├── shared/
+        |   |   |   ├── models/
+        |   |   |   |   ├── api.model.ts
+        |   |   |   |   ├── auth.model.ts
+        |   ├── assets/
+        |   |   ├── .gitkeep
+        |   |   ├── css/
+        |   |   |   ├── material.scss
+        |   |   |   ├── normalize.scss
+        |   ├── environments/
+        |   |   ├── environment.prod.ts
+        |   |   ├── environment.ts
+        |   ├── favicon.ico
+        |   ├── index.html
+        |   ├── main.ts
+        |   ├── styles.scss
+        ├── tsconfig.app.json
+        ├── tsconfig.json
+        ├── tsconfig.spec.json

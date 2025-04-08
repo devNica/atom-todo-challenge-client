@@ -1,0 +1,21 @@
+<div class="auth-form">
+
+    <strong class="form-label">Inicio de Sesion de Usuarios</strong>
+
+    <form [formGroup]="form">
+
+        <mat-form-field class="full-width">
+            <mat-label>
+                Correo:
+            </mat-label>
+            <input matInput formControlName="email">
+        </mat-form-field>
+
+        <button mat-flat-button color="primary" [disabled]="!form.valid" class="login-btn" (click)="handleSubmit($event)">
+            <mat-icon class="mat-18">person</mat-icon>
+            Login
+        </button>
+
+    </form>
+
+</div>
